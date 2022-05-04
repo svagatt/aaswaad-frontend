@@ -1,23 +1,23 @@
 import Carousel from 'react-material-ui-carousel';
 import RemoveIcon from '@mui/icons-material/Remove';
 import './ImageCarousel.css';
-import ColorThief from 'colorthief';
 
-function ImageCarousel(){
-    const images:string[] = [
-        '/images/plainMango.JPG',
-        '/images/rasamMix.JPG',
-        '/images/kaaramchakkilam3.JPG'
+function ImageCarousel() {
+
+    const images: {src:string, bgcolor: string}[] = [
+        {src: '/images/plainMango.JPG', bgcolor: 'rgb(64, 63, 68, 0.75)'},
+        {src:'/images/rasamMix.JPG', bgcolor:'rgb(42, 38, 40, 0.75)'},
+        {src:'/images/kaaramchakkilam3.JPG', bgcolor:'rgb(60, 74, 110, 0.75)'},
     ];
-    const color = 'black';
 
-        return(
-           <Carousel navButtonsAlwaysInvisible={true} sx={{maxWidth:'100%', maxHeight:'auto'}} IndicatorIcon={<RemoveIcon fontSize='large'/>}>
-               {
-               images.map((image, i) => (<img key ={i} style = {{backgroundColor: color}} className={'imageProperties'} src={image}/>)) 
-               }
-           </Carousel> 
-        );
+
+    return (
+        <Carousel navButtonsAlwaysInvisible={true} sx={{ maxWidth: '100%', maxHeight: 'auto', mx:'auto' }} IndicatorIcon={<RemoveIcon fontSize='large'/>}>
+            {
+                images.map((image, i) => (<img key={i} className={'imageProperties'} src={image.src}/>))
+            }
+        </Carousel>
+    );
 }
 
 export default ImageCarousel;
