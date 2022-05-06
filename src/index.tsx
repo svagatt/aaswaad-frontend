@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import NavBar from './components/NavBar';
 import reportWebVitals from './reportWebVitals';
-import {ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
-
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import { BrowserRouter } from 'react-router-dom';
+import { routes } from './routes';
 
 const client = new ApolloClient({
   uri: 'http://localhost:3000/',
@@ -19,7 +20,10 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
-      <App />
+      <BrowserRouter>
+      <NavBar/>
+      {routes}
+      </BrowserRouter>
     </ApolloProvider>
   </React.StrictMode>
 );

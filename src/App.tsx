@@ -5,7 +5,7 @@ import FeaturedItems from './components/FeaturedItems';
 
 function App() {
   return (
-   <><NavBar/><ImageCarousel/><FeaturedItems title={'BEST SELLERS'}/></>
+   <><ImageCarousel/><FeaturedItems title={'BEST SELLERS'}/></>
   );
 }
 
