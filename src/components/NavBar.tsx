@@ -26,8 +26,7 @@ export default function NavBar() {
     const navigateTo = useNavigate();
         return (
             <AppBar position='sticky' color='transparent'>
-                <Container max-width='xl' disableGutters={true} sx={{mx:'2rem'}}>
-                    <Toolbar disableGutters={true}>
+                    <Toolbar disableGutters={true} sx={{position:'sticky'}}>
                         <Typography align='left' children='aaswaad' sx={{ fontFamily: 'Samarkan' }} variant='h3' onClick={()=> navigateTo('/')}/>
                         <Box sx={{ flexGrow: 1, display: { xs: 1, md: 'flex' }, mx:'2rem' }}>
                             {pages.map((page) => (
@@ -40,7 +39,6 @@ export default function NavBar() {
                             ))}
                         </Box>
                     </Toolbar>
-                </Container>
             </AppBar>
 
         );

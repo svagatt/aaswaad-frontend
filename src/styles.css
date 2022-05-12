@@ -1,0 +1,18 @@
+.paper-background{
+width: 100%;
+height: 100%;
+background-color:rgba(255,255,255,0.5) !important;
+background-image: url(./images/mandala.png);
+background-blend-mode: lighten;
+display: flex;
+align-items: center;
+font-family: 'Lato-Regular' !important;
+}
+
+.button-style{
+    color:black !important;
+    font-family: 'Lato-Regular' !important;
+    border-color: black !important;
+    font-weight: 800;
+    background-color: white !important;
+}

@@ -14,6 +14,12 @@ code {
 
 @font-face{
   font-family: "Samarkan";
-  src: local("samarkan"), url("./fonts/samarkan.TTF") format("truetype");
+  src: url("./fonts/samarkan.TTF") format("truetype");
+  font-weight: normal;
+}
+
+@font-face{
+  font-family: "Lato-Regular";
+  src: url("./fonts/Lato-Regular.ttf") format("truetype");
   font-weight: normal;
 }
